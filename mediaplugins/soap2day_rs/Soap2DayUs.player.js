@@ -13,5 +13,4 @@ function removeElementExcept(survivor) {
 }
 const playerElement = document.getElementsByClassName('watching_player-area')[0];
 removeElementExcept(playerElement);
-document.body.style.background = "black";
 //document.getElementById("overlay-center").remove();
