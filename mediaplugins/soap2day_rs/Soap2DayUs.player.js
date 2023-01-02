@@ -7,7 +7,7 @@ function removeElementExcept(survivor) {
     const siblings = getSiblings(survivor);
     for (const sibling of siblings) {
     if (sibling.tagName === 'HEAD') continue;
-    sibling.remove();
+        sibling.remove();
     }
     removeElementExcept(parent);
 }
