@@ -9,8 +9,8 @@
             "element_to_wait_for": null,
             "base_url": "https://fzmovies.net",
             "scrapper_class_name": "FZMoviesNet",
-            "scrapper_class_location": "/fzmovies_net/FZMoviesNet.js",
-            "player_injection_script_location": "/fzmovies_net/FZMoviesNetPlayer.js",
+            "scrapper_class_location": "/mediaplugins/fzmovies_net/FZMoviesNet.js",
+            "player_injection_script_location": "/mediaplugins/fzmovies_net/FZMoviesNetPlayer.js",
             "urls": {
                 "popular": "https://fzmovies.net/movieslist.php?by=downloads",
                 "movies": "https://fzmovies.net/movieslist.php?by=latest",
@@ -27,8 +27,8 @@
             "element_to_wait_for": null,
             "base_url": "https://soap2day.rs",
             "scrapper_class_name": "Soap2DayUs",
-            "scrapper_class_location": "/soap2day_rs/Soap2DayUs.js",
-            "player_injection_script_location": "/soap2day_rs/Soap2DayUs.player.js",
+            "scrapper_class_location": "/mediaplugins/soap2day_rs/Soap2DayUs.js",
+            "player_injection_script_location": "/mediaplugins/soap2day_rs/Soap2DayUs.player.js",
             "urls": {
                 "popular": "https://soap2day.rs/home",
                 "movies": "https://soap2day.rs/movie",
@@ -46,8 +46,8 @@
             "scrapper_class_name": "W5123Animes",
             "base_url": "https://w5.123animes.mobi",
             "element_to_wait_for": "//*[@id=\"servers-container\"]/div/div[2]",
-            "scrapper_class_location": "/w5123anime/W5123Animes.js",
-            "player_injection_script_location": "/w5123anime/W5123Animes.player.js",
+            "scrapper_class_location": "/mediaplugins/w5123anime/W5123Animes.js",
+            "player_injection_script_location": "/mediaplugins/w5123anime/W5123Animes.player.js",
             "urls": {
                 "popular": "https://w5.123animes.mobi/home",
                 "genre": "https://w5.123animes.mobi/genere/{0}",

@@ -1,0 +1,10 @@
+[
+    {
+        "label": "English",
+        "location": "/languages/data/English.json"
+    },
+    {
+        "label": "Yoruba",
+        "location": "/languages/data/Yoruba.json"
+    }
+]
