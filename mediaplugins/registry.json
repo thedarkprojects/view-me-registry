@@ -3,25 +3,6 @@
     "media_plugins": [
         {
             "active": true,
-            "page_query": "pg",
-            "name": "fzmovies.net",
-            "author": "Theotherguy",
-            "element_to_wait_for": null,
-            "base_url": "https://fzmovies.net",
-            "scrapper_class_name": "FZMoviesNet",
-            "scrapper_class_location": "/mediaplugins/fzmovies_net/FZMoviesNet.js",
-            "player_injection_script_location": "/mediaplugins/fzmovies_net/FZMoviesNetPlayer.js",
-            "urls": {
-                "popular": "https://fzmovies.net/movieslist.php?by=downloads",
-                "movies": "https://fzmovies.net/movieslist.php?by=latest",
-                "cast": "https://fzmovies.net/starcast.php?starcast={0}",
-                "genre": "https://fzmovies.net/genre.php?genre={0}",
-                "tv_shows": "https://fzmovies.net/movieslist.php?by=latest",
-                "search": "https://fzmovies.net/csearch.php&method=POST&fields={searchby:Name,searchname:{0}}"
-            }
-        },
-        {
-            "active": true,
             "name": "Soap2day.rs",
             "author": "Theotherguy",
             "element_to_wait_for": null,

@@ -1,17 +1,16 @@
-const ffs = require("kyofuuc").init({
-    responseType: "text"
-});
-const { default: parse } = require("node-html-parser");
 
-module.exports = class W5123Animes {
+module.exports = W5123Animes = {
 
-    static buildFullUrl(part) {
+    ffs: null,
+    parse: null,
+
+    buildFullUrl(part) {
         return part.startsWith("/") ? `https://w5.123animes.mobi${part}` : part;
-    }
+    },
 
-    static cleanMoviesList(html, url, cb) {
+    cleanMoviesList(html, url, cb) {
         const result = [];
-        const root = parse(html);
+        const root = W5123Animes.parse(html);
         const movies = root.querySelectorAll('.film-list > .item > .inner');
         for (const movie of movies) {
             const fileNameEL = movie.querySelectorAll('a')[1];
@@ -28,13 +27,13 @@ module.exports = class W5123Animes {
             });
         }
         cb(result);
-    }
+    },
   
-    static async cleanMoviePage(html, url, cb) {
+    async cleanMoviePage(html, url, cb) {
         const result = {};
         const seasons = [];
         const similarMovies = [];
-        const root = parse(html);
+        const root = W5123Animes.parse(html);
         result.type = "movie";
         result.source = "w5.123animes.mobi";
         result.scrapper_class_name = "W5123Animes";
@@ -95,9 +94,9 @@ module.exports = class W5123Animes {
             result.servers = [ { name: "Base", link: url } ];
         }
         cb(result);
-    }
+    },
 
-    static chunkArray(arr, size) {
+    chunkArray(arr, size) {
         var R = [];
         for (var i = 0; i < arr.length; i += size)
             R.push(arr.slice(i, i + size));
