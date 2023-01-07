@@ -33,7 +33,7 @@ module.exports = XVideos = {
         const root = XVideos.parse(html);
         result.source = "xvideos.com";
         result.scrapper_class_name = "XVideos";
-        result.title = result.synopsis = root.querySelector(".page-title").text.trim();
+        result.title = result.synopsis = root?.querySelector(".page-title")?.text.trim();
         result.release_date = "";
 
         result.casts = [];
@@ -45,7 +45,7 @@ module.exports = XVideos = {
                 result.casts.push(href/*href.substring(href.lastIndexOf("/")+1)*/);
                 continue;
             };
-            result.genres.push(genreEl.text.trim());
+            result.genres.push(genreEl?.text.trim());
         }
 
         const movies = root.querySelectorAll('.thumb-block');
