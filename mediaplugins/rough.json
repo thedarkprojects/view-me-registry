@@ -1,0 +1,25 @@
+[
+    {
+        "active": true,
+        "name": "Xvideos.com",
+        "author": "Theotherguy",
+        "element_to_wait_for": null,
+        "base_url": "https://www.xvideos.com",
+        "scrapper_class_name": "XVideos",
+        "scrapper_class_location": "/mediaplugins/xvideos_com/XVideo.js",
+        "player_injection_script_location": "/mediaplugins/xvideos_com/XVideo.player.js",
+        "urls": {
+            "popular": "https://www.xvideos.com",
+            "movies": "https://www.xvideos.com/?k=movies&p={0}",
+            "cast": "https://www.xvideos.com{0}#_tabVideos,page={1}",
+            "genre": "https://www.xvideos.com/tags/{0}/{1}",
+            "tv_shows": "https://www.xvideos.com/?k=TV+Shows&p={1}",
+            "search": "https://www.xvideos.com/?k={0}&p={1}",
+            "coming_soon": "https://www.xvideos.com/?k=Coming+Soon&p={1}"
+        }
+    },
+    {
+        "label": "Yoruba",
+        "location": "/languages/data/Yoruba.json"
+    }
+]
