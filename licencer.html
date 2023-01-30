@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>View Me Flix Licencer</title>
+</head>
+
+<body>
+    <h2>Licence Generator</h2>
+    <br />
+    <textarea id="keyarea" style="width: 400px; height: 200px"></textarea>
+    <br /> <br />
+    Expire in the next 1 hour <input type="checkbox" id="hourcb">
+    <br />
+    Expire in the next 1 minutes <input type="checkbox" id="minutescb" checked>
+    <br />
+    Obfuscation Go Brrr <input type="checkbox" id="obfugbr" checked>
+    <br /> <br />
+    <button onclick="generate()">Generate</button>
+</body>
+<script>
+    function _g(id) {
+        return document.getElementById(id);
+    }
+    function generate() {
+        const keyarea = _g("keyarea");
+        const obfuscate = _g("obfugbr").checked;
+        const expireInNextHour = _g("hourcb").checked;
+        const expireInNexMinutes = _g("minutescb").checked;
+
+        const date = new Date();
+        const dateParts = [date.getFullYear(), date.getMonth() + 1, date.getDate(), date.getHours(), date.getMinutes()];
+
+        let licenceKey = makeid(rndInt());
+        if (expireInNextHour) licenceKey += "E";
+        for (const datePart of dateParts) {
+            if (expireInNextHour) licenceKey += "XPH";
+            licenceKey += makeid(rndInt(5), "0123456789") + `s${datePart}p` + makeid(rndInt(), "0123456789");
+            if (expireInNextHour) licenceKey += "x1I4";
+            if (obfuscate) licenceKey += makeid(rndInt(40), "*^&@)SHGFGHFGF");
+            else licenceKey += makeid(rndInt(8));
+        }
+        if (obfuscate) licenceKey += makeid(rndInt(30));
+        else licenceKey += makeid(rndInt(11));
+
+        console.log(obfuscate, expireInNextHour, expireInNexMinutes, licenceKey);
+        keyarea.value = licenceKey;
+    }
+
+    function makeid(length, characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789") {
+        let result = '';
+        const charactersLength = characters.length;
+        let counter = 0;
+        while (counter < length) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            counter += 1;
+        }
+        return result;
+    }
+
+    function rndInt(max = 20) {
+        return Math.floor(Math.random() * max) + 1;
+    }
+</script>
+
+</html>
