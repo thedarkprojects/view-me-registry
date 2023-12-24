@@ -22,6 +22,25 @@
         },
         {
             "active": true,
+            "name": "Movies7.to",
+            "author": "Theotherguy",
+            "base_url": "https://movies7.to",
+            "scrapper_class_name": "Movies7To",
+            "scrapper_class_location": "/mediaplugins/movies7_to/Movies7To.js",
+            "player_injection_script_location": "/mediaplugins/movies7_to/Movies7To.player.js",
+            "element_to_wait_for": "body > div.body-wrap > main > div > div > aside.site-content > section:nth-child(3) > div:nth-child(2) > div",
+            "urls": {
+                "tv_shows": "https://movies7.to/tv",
+                "popular": "https://movies7.to/home",
+                "movies": "https://movies7.to/movie",
+                "cast": "https://movies7.to/star/{0}",
+                "genre": "https://movies7.to/genre/{0}",
+                "search": "https://movies7.to/search/{0}",
+                "coming_soon": "https://movies7.to/newest"
+            }
+        },
+        {
+            "active": true,
             "author": "Theotherguy",
             "name": "w5.123animes.mobi",
             "scrapper_class_name": "W5123Animes",
