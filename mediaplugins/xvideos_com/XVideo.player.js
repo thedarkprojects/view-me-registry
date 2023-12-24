@@ -11,4 +11,4 @@ function removeElementExcept(survivor) {
     }
     removeElementExcept(parent);
 }
-removeElementExcept(document.getElementById("html5video"));
+//removeElementExcept(document.getElementById("html5video"));
